@@ -67,8 +67,8 @@ registration process.
 
 #### enableFlashMessages (type: `boolean`, default: `true`)
 
-If `true` views will display flash messages.
- 
+If `true` views will display flash messages. Disable this if you want to handle messages display in your views.
+
 #### enableSwitchIdentities (type: `boolean`, default: `true`)
  
 If `true` allows switching identities for the admin user.
@@ -216,6 +216,9 @@ Configures the name of the session key that will be used to hold the original ad
 If `false`, allow the assignment of both roles and permissions to users.
 Set to `true` to restrict user assignments to roles only.
 
+#### disableIpLogging (type: `boolean`, default: `false`)
+
+If `true` registration and last login IPs are not logged into users table, instead a dummy 127.0.0.1 is used
 
 
 © [2amigos](http://www.2amigos.us/) 2013-2019

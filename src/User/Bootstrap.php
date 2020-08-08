@@ -291,7 +291,7 @@ class Bootstrap implements BootstrapInterface
     protected function initControllerNamespace(WebApplication $app)
     {
         $app->getModule('user')->controllerNamespace = $app->getModule('user')->controllerNamespace;
-        $app->getModule('user')->setViewPath('@Da/User/resources/views');
+        $app->getModule('user')->setViewPath($app->getModule('user')->viewPath);
     }
 
     /**
@@ -325,6 +325,8 @@ class Bootstrap implements BootstrapInterface
             'LoginForm' => 'Da\User\Form\LoginForm',
             'SettingsForm' => 'Da\User\Form\SettingsForm',
             'RecoveryForm' => 'Da\User\Form\RecoveryForm',
+            // --- services
+            'MailService' => 'Da\User\Service\MailService',
         ];
 
         $routes = [
@@ -348,6 +350,9 @@ class Bootstrap implements BootstrapInterface
                 'LoginForm',
                 'SettingsForm',
                 'RecoveryForm',
+            ],
+            'Da\User\Service' => [
+                'MailService',
             ],
         ];
 

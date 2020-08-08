@@ -1,4 +1,17 @@
 # CHANGELOG
+
+## work in progress
+ - Fix #380: Avoid rewriting AccessRule::matchRole (maxxer)
+ - Fix #378: Add module attribute 'disableIpLogging' (jkmssoft)
+ - Enh #387: Added Persian translation (hadi-aj)
+ - Fix #384: Delete flash messages after consuming (cgsmith)
+
+## 1.5.1 April 5, 2020
+ - Fix #370: Extending view fix (effsoft)
+ - Fix #306: Add event for failed login (ivan-cc)
+ - Fix #347: Only pass fields known to User model in registrationControl->actionRegister() (BillHeaton)
+ - Fix #346: Update ReCaptcha guide to not use AJAX  (BillHeaton)
+ - Fix #345: Update ReCaptcha guide to add scenarios() in recoveryForm  (BillHeaton)
  - Fix #307: Fix French translation (arollmann)
  - Fix #316: Fix new response from Google OAuth Api (Julian-B90)
  - Fix #321: Fix new response from LinkedIn OAuth Api (tonydspaniard) 
@@ -12,6 +25,7 @@
  - Enh #331: Added Ukrainian translations (kwazaro)
  - Enh #324: Added option to restrict user assignments to roles only (CheckeredFlag)
  - Enh #224: Added option to require consent (eseperio)
+ - Enh: Added classMap for MailService (necrox87)
 
 ## 1.5.0 April 19, 2019
  - Fix: Fix condition in EmailChangeService (it was always false) (borisaeric)

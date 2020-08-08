@@ -111,6 +111,7 @@ Once we have it installed, we have to configure it on your `config.php` file.
     'user' => [
         'class' => Da\User\Module::class,
         // ...other configs from here: [Configuration Options](installation/configuration-options.md), e.g.
+        // 'administrators' => ['admin'], // this is required for accessing administrative actions
         // 'generatePasswords' => true,
         // 'switchIdentitySessionKey' => 'myown_usuario_admin_user_key',
     ]
@@ -184,7 +185,7 @@ Helpful Guides
 - [How to Add Captcha Widget](helpful-guides/how-to-add-captcha-widget.md)
 - [How to Add Google reCaptcha Widget](helpful-guides/how-to-use-recaptcha-widget.md)
 - [How to Implement Two-Factor Authentication](helpful-guides/how-to-implement-two-factor-auth.md)
-- [How to Switch Identities](helpful-guides/how-to-swith-identities.md)
+- [How to Switch Identities](helpful-guides/how-to-switch-identities.md)
 - [Separate Frontend and Backend Sessions](helpful-guides/separate-frontend-and-backend-sessions.md)
 - [Social Network Authentication](helpful-guides/social-network-authentication.md)
 

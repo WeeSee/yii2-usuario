@@ -141,12 +141,16 @@ class SecurityController extends Controller
             if ($form->login()) {
                 $form->getUser()->updateAttributes([
                     'last_login_at' => time(),
-                    'last_login_ip' => Yii::$app->request->getUserIP(),
+                    'last_login_ip' => $this->module->disableIpLogging ? '127.0.0.1' : Yii::$app->request->getUserIP(),
                 ]);
 
                 $this->trigger(FormEvent::EVENT_AFTER_LOGIN, $event);
 
                 return $this->goBack();
+            }
+            else
+            {
+                $this->trigger(FormEvent::EVENT_FAILED_LOGIN, $event);    
             }
         }
 
